@@ -1,0 +1,22 @@
+.DS_STORE
+
+/dist/
+*.log
+node_modules
+
+.idea/
+.vscode/launch.json
+.vscode/settings.json
+.vscode/tasks.json
+*.swo
+*.swp
+
+# Ignore npm/yarn debug log
+npm-debug.log
+yarn-error.log
+
+# build-analytics
+.build-analytics
+
+# Ignore .history for the xyz.local-history VSCode extension
+.history

@@ -1,0 +1,13 @@
+<input type="text" class="form-control" [(ngModel)]="searchCurrency">
+<hr>
+<div *ngIf="errorMessage" class="alert alert-warning">
+    <strong>Warning!</strong> {{errorMessage | json}}
+</div>
+
+<div class="list-group">
+    <div class="list-group-item"
+        *ngFor="let currency of currencyList | currencyFilter:searchCurrency:'code':'country'; let idx = index"
+        (click)="getDetails(currency)">
+        <b>{{idx+1}}:</b> currency <i>{{currency.code}}</i> and country <i>{{currency.country}}</i>
+    </div>
+</div>

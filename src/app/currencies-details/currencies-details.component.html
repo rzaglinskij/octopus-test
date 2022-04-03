@@ -1,0 +1,10 @@
+<div *ngIf="currency.data">
+    <ul>
+        <li>Currency: {{currency.currency?.code}}</li>
+        <li>Country: {{currency.currency?.country}}</li>
+        <li>Average rate: {{ getAverage(currency.data.rates) | number}}</li>
+    </ul>
+
+    <google-chart [type]="'LineChart'" [data]="chartData"></google-chart>
+
+</div>
